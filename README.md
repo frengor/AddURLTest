@@ -17,7 +17,7 @@ Enter your server and break a block. If everything works, a (client-side only) z
 
 <details><summary>Example exception</summary>
 
-```txt
+```text
 java.lang.NoClassDefFoundError: net/minecraft/world/level/World
 	at addurl-test-plugin-1.0.jar/com.fren_gor.addURLTestPlugin.BlockBreakListener.onBlockBreak(BlockBreakListener.java:12) ~[addurl-test-plugin-1.0.jar:?]
 	at com.destroystokyo.paper.event.executor.asm.generated.GeneratedEventExecutor1.execute(Unknown Source) ~[?:?]
