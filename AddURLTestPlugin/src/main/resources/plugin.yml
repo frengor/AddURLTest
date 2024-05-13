@@ -1,0 +1,6 @@
+main: com.fren_gor.addURLTestPlugin.AddURLTestPlugin
+name: AddURLTestPlugin
+version: 1.0
+author: fren_gor
+
+api-version: 1.20.6

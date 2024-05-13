@@ -1,0 +1,104 @@
+[06:52:09] [Paper Plugin Remapper Thread - 2/INFO]: [PluginRemapper] Remapping plugin 'plugins/addurl-test-plugin-1.0.jar'...
+[06:52:09] [Paper Plugin Remapper Thread - 2/INFO]: [PluginRemapper] Done remapping plugin 'plugins/addurl-test-plugin-1.0.jar' in 276ms.
+[06:52:11] [ServerMain/INFO]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, name=PROD]
+[06:52:12] [ServerMain/INFO]: Loaded 1175 recipes
+[06:52:12] [ServerMain/INFO]: Loaded 1276 advancements
+[06:52:12] [Server thread/INFO]: Starting minecraft server version 1.20.6
+[06:52:12] [Server thread/INFO]: Loading properties
+[06:52:12] [Server thread/INFO]: This server is running Paper version git-Paper-71 (MC: 1.20.6) (Implementing API version 1.20.6-R0.1-SNAPSHOT) (Git: 11c3963)
+[06:52:12] [Server thread/INFO]: Server Ping Player Sample Count: 12
+[06:52:12] [Server thread/INFO]: Using 4 threads for Netty based IO
+[06:52:13] [Server thread/WARN]: [!] The timings profiler has been enabled but has been scheduled for removal from Paper in the future.
+    We recommend installing the spark profiler as a replacement: https://spark.lucko.me/
+    For more information please visit: https://github.com/PaperMC/Paper/issues/8948
+[06:52:13] [Server thread/INFO]: [ChunkTaskScheduler] Chunk system is using 1 I/O threads, 6 worker threads, and gen parallelism of 6 threads
+[06:52:13] [Server thread/INFO]: Default game type: SURVIVAL
+[06:52:13] [Server thread/INFO]: Generating keypair
+[06:52:13] [Server thread/INFO]: Starting Minecraft server on *:25565
+[06:52:13] [Server thread/INFO]: Using epoll channel type
+[06:52:13] [Server thread/INFO]: Paper: Using libdeflate (Linux x86_64) compression from Velocity.
+[06:52:13] [Server thread/INFO]: Paper: Using OpenSSL 1.1.x (Linux x86_64) cipher from Velocity.
+[06:52:13] [Server thread/INFO]: [AddURLTestPlugin] Loading server plugin AddURLTestPlugin v1.0
+[06:52:13] [Server thread/INFO]: Server permissions file permissions.yml is empty, ignoring it
+[06:52:13] [Server thread/INFO]: Preparing level "world"
+[06:52:13] [Server thread/INFO]: Preparing start region for dimension minecraft:overworld
+[06:52:14] [Server thread/INFO]: Time elapsed: 701 ms
+[06:52:14] [Server thread/INFO]: Preparing start region for dimension minecraft:the_nether
+[06:52:14] [Server thread/INFO]: Time elapsed: 110 ms
+[06:52:14] [Server thread/INFO]: Preparing start region for dimension minecraft:the_end
+[06:52:14] [Server thread/INFO]: Time elapsed: 158 ms
+[06:52:14] [Server thread/INFO]: [AddURLTestPlugin] Enabling AddURLTestPlugin v1.0
+[06:52:14] [Server thread/INFO]: Running delayed init tasks
+[06:52:14] [Server thread/INFO]: Done (2.230s)! For help, type "help"
+[06:52:14] [Server thread/INFO]: Timings Reset
+[06:52:22] [Server thread/INFO]: Checking version, please wait...
+[06:52:22] [Thread-11/INFO]: This server is running Paper version git-Paper-71 (MC: 1.20.6) (Implementing API version 1.20.6-R0.1-SNAPSHOT) (Git: 11c3963)
+You are running the latest version
+Previous version: git-Paper-64 (MC: 1.20.6)
+[06:52:50] [User Authenticator #0/INFO]: UUID of player fren_gor is 831e3f14-b54d-47fe-bd4e-06d9e6ce681b
+[06:52:50] [Server thread/INFO]: fren_gor joined the game
+[06:52:50] [Server thread/INFO]: fren_gor[/127.0.0.1:44294] logged in with entity id 254 at ([world]163.41622399379932, 80.0, 62.62837245804391)
+[06:52:53] [Server thread/ERROR]: Could not pass event BlockBreakEvent to AddURLTestPlugin v1.0
+java.lang.NoClassDefFoundError: net/minecraft/world/level/World
+	at addurl-test-plugin-1.0.jar/com.fren_gor.addURLTestPlugin.BlockBreakListener.onBlockBreak(BlockBreakListener.java:12) ~[addurl-test-plugin-1.0.jar:?]
+	at com.destroystokyo.paper.event.executor.asm.generated.GeneratedEventExecutor1.execute(Unknown Source) ~[?:?]
+	at org.bukkit.plugin.EventExecutor$2.execute(EventExecutor.java:77) ~[paper-api-1.20.6-R0.1-SNAPSHOT.jar:?]
+	at co.aikar.timings.TimedEventExecutor.execute(TimedEventExecutor.java:81) ~[paper-api-1.20.6-R0.1-SNAPSHOT.jar:git-Paper-71]
+	at org.bukkit.plugin.RegisteredListener.callEvent(RegisteredListener.java:70) ~[paper-api-1.20.6-R0.1-SNAPSHOT.jar:?]
+	at io.papermc.paper.plugin.manager.PaperEventManager.callEvent(PaperEventManager.java:54) ~[paper-1.20.6.jar:git-Paper-71]
+	at io.papermc.paper.plugin.manager.PaperPluginManagerImpl.callEvent(PaperPluginManagerImpl.java:131) ~[paper-1.20.6.jar:git-Paper-71]
+	at org.bukkit.plugin.SimplePluginManager.callEvent(SimplePluginManager.java:627) ~[paper-api-1.20.6-R0.1-SNAPSHOT.jar:?]
+	at net.minecraft.server.level.ServerPlayerGameMode.destroyBlock(ServerPlayerGameMode.java:378) ~[paper-1.20.6.jar:git-Paper-71]
+	at net.minecraft.server.level.ServerPlayerGameMode.destroyAndAck(ServerPlayerGameMode.java:337) ~[paper-1.20.6.jar:git-Paper-71]
+	at net.minecraft.server.level.ServerPlayerGameMode.handleBlockBreakAction(ServerPlayerGameMode.java:213) ~[paper-1.20.6.jar:git-Paper-71]
+	at net.minecraft.server.network.ServerGamePacketListenerImpl.handlePlayerAction(ServerGamePacketListenerImpl.java:1845) ~[paper-1.20.6.jar:git-Paper-71]
+	at net.minecraft.network.protocol.game.ServerboundPlayerActionPacket.handle(ServerboundPlayerActionPacket.java:51) ~[paper-1.20.6.jar:git-Paper-71]
+	at net.minecraft.network.protocol.game.ServerboundPlayerActionPacket.handle(ServerboundPlayerActionPacket.java:20) ~[paper-1.20.6.jar:git-Paper-71]
+	at net.minecraft.network.protocol.PacketUtils.lambda$ensureRunningOnSameThread$0(PacketUtils.java:55) ~[paper-1.20.6.jar:git-Paper-71]
+	at net.minecraft.server.TickTask.run(TickTask.java:18) ~[paper-1.20.6.jar:git-Paper-71]
+	at net.minecraft.util.thread.BlockableEventLoop.doRunTask(BlockableEventLoop.java:151) ~[paper-1.20.6.jar:git-Paper-71]
+	at net.minecraft.util.thread.ReentrantBlockableEventLoop.doRunTask(ReentrantBlockableEventLoop.java:24) ~[paper-1.20.6.jar:git-Paper-71]
+	at net.minecraft.server.MinecraftServer.doRunTask(MinecraftServer.java:1517) ~[paper-1.20.6.jar:git-Paper-71]
+	at net.minecraft.server.MinecraftServer.doRunTask(MinecraftServer.java:198) ~[paper-1.20.6.jar:git-Paper-71]
+	at net.minecraft.util.thread.BlockableEventLoop.pollTask(BlockableEventLoop.java:125) ~[paper-1.20.6.jar:git-Paper-71]
+	at net.minecraft.server.MinecraftServer.pollTaskInternal(MinecraftServer.java:1494) ~[paper-1.20.6.jar:git-Paper-71]
+	at net.minecraft.server.MinecraftServer.pollTask(MinecraftServer.java:1417) ~[paper-1.20.6.jar:git-Paper-71]
+	at net.minecraft.util.thread.BlockableEventLoop.managedBlock(BlockableEventLoop.java:135) ~[paper-1.20.6.jar:git-Paper-71]
+	at net.minecraft.server.MinecraftServer.waitUntilNextTick(MinecraftServer.java:1383) ~[paper-1.20.6.jar:git-Paper-71]
+	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:1244) ~[paper-1.20.6.jar:git-Paper-71]
+	at net.minecraft.server.MinecraftServer.lambda$spin$0(MinecraftServer.java:326) ~[paper-1.20.6.jar:git-Paper-71]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[?:?]
+Caused by: java.lang.ClassNotFoundException: net.minecraft.world.level.World
+	at org.bukkit.plugin.java.PluginClassLoader.loadClass0(PluginClassLoader.java:197) ~[paper-api-1.20.6-R0.1-SNAPSHOT.jar:?]
+	at org.bukkit.plugin.java.PluginClassLoader.loadClass(PluginClassLoader.java:164) ~[paper-api-1.20.6-R0.1-SNAPSHOT.jar:?]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526) ~[?:?]
+	... 28 more
+[06:52:55] [Server thread/INFO]: fren_gor lost connection: Disconnected
+[06:52:55] [Server thread/INFO]: fren_gor left the game
+[06:52:58] [Server thread/INFO]: Stopping the server
+[06:52:59] [Server thread/INFO]: Stopping server
+[06:52:59] [Server thread/INFO]: [AddURLTestPlugin] Disabling AddURLTestPlugin v1.0
+[06:52:59] [Server thread/INFO]: Saving players
+[06:52:59] [Server thread/INFO]: Saving worlds
+[06:52:59] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world]'/minecraft:overworld
+[06:52:59] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk system to halt for world 'world'
+[06:52:59] [Server thread/INFO]: [ChunkHolderManager] Halted chunk system for world 'world'
+[06:52:59] [Server thread/INFO]: [ChunkHolderManager] Saving all chunkholders for world 'world'
+[06:52:59] [Server thread/INFO]: [ChunkHolderManager] Saved 791 block chunks, 791 entity chunks, 0 poi chunks in world 'world' in 0.74s
+[06:52:59] [Server thread/INFO]: ThreadedAnvilChunkStorage (world): All chunks are saved
+[06:52:59] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world_nether]'/minecraft:the_nether
+[06:52:59] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk system to halt for world 'world_nether'
+[06:52:59] [Server thread/INFO]: [ChunkHolderManager] Halted chunk system for world 'world_nether'
+[06:52:59] [Server thread/INFO]: [ChunkHolderManager] Saving all chunkholders for world 'world_nether'
+[06:53:00] [Server thread/INFO]: [ChunkHolderManager] Saved 529 block chunks, 529 entity chunks, 0 poi chunks in world 'world_nether' in 0.28s
+[06:53:00] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[06:53:00] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world_the_end]'/minecraft:the_end
+[06:53:00] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk system to halt for world 'world_the_end'
+[06:53:00] [Server thread/INFO]: [ChunkHolderManager] Halted chunk system for world 'world_the_end'
+[06:53:00] [Server thread/INFO]: [ChunkHolderManager] Saving all chunkholders for world 'world_the_end'
+[06:53:00] [Server thread/INFO]: [ChunkHolderManager] Saved 529 block chunks, 529 entity chunks, 0 poi chunks in world 'world_the_end' in 0.07s
+[06:53:00] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[06:53:00] [Server thread/INFO]: ThreadedAnvilChunkStorage: All dimensions are saved
+[06:53:00] [Server thread/INFO]: Flushing Chunk IO
+[06:53:00] [Server thread/INFO]: Closing Thread Pool
+[06:53:00] [Server thread/INFO]: Closing Server
