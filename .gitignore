@@ -12,6 +12,7 @@
 
 # Package Files #
 *.jar
+!addurl-test-plugin-1.0.jar
 *.war
 *.nar
 *.ear
