@@ -6,6 +6,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
+import java.lang.reflect.InaccessibleObjectException;
 import java.lang.reflect.Method;
 import java.net.URL;
 import java.net.URLClassLoader;
@@ -39,8 +40,11 @@ public class AddURLTestPlugin extends JavaPlugin {
 
             URLClassLoader classLoader = (URLClassLoader) getClassLoader();
             addURLMethod.invoke(classLoader, dest.toUri().toURL());
+        } catch (InaccessibleObjectException e) {
+            getLogger().log(Level.SEVERE, "An exception occurred! Did you add the --add-opens java.base/java.net=ALL-UNNAMED parameter?", e);
+            return;
         } catch (Throwable t) {
-            getLogger().log(Level.SEVERE, "An exception occurred! Did you add the --add-opens java.base/java.net=ALL-UNNAMED parameter?", t);
+            getLogger().log(Level.SEVERE, "An exception occurred!", t);
             return;
         }
 
